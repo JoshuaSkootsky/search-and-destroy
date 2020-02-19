@@ -11,11 +11,18 @@ const test5 = [2, 4, 1, 1, 2, 3, 7, 1, 1, 3];
 describe('min number of jumps', () => {
   it('returns the min # of jumps to cross an array of positive integers', () => {
     expect(minJumps(test1)).to.equal(1);
-    expect(minJumps(test2)).to.equal(1);
-    expect(minJumps(test3)).to.equal(2);
-    expect(minJumps(test4)).to.equal(2);
-    expect(minJumps(test5)).to.equal(4);
-
     //Feel free to write your own tests. Include >=1 edge case :)
+  });
+  it('handles test array #2', () => {
+    expect(minJumps(test2)).to.equal(1);
+  });
+  it('handles test array #3', () => {
+    expect(minJumps(test3)).to.equal(2);
+  });
+  it('handles test array #4', () => {
+    expect(minJumps(test4)).to.equal(2);
+  });
+  it('handles test array #5', () => {
+    expect(minJumps(test5)).to.equal(4);
   });
 });

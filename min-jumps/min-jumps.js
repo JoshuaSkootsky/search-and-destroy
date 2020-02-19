@@ -5,7 +5,7 @@ const minJumps = arr => {
   const result = [0];
   let picked = arr[0];
   while (result.length < arr.length) {
-    let count = result[result.length - 1];
+    let count = 1 + result[result.length - 1];
     for (let i = 0; i < picked; i++) {
       result.push(count);
     }
