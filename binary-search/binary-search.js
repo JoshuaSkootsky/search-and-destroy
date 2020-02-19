@@ -6,20 +6,21 @@ const binarySearch = (array, target) => {
   let right = array.length - 1;
   let mid = ((left + right) / 2) | 0;
   let midVal = array[mid];
-  while (left < right) {
+
+  while (left <= right) {
     if (midVal === target) return true;
-    if (midVal > target) {
+    if (midVal < target) {
       left = mid + 1;
       mid = ((left + right) / 2) | 0;
       midVal = array[mid];
     }
-    if (midVal < target) {
+    if (midVal > target) {
       right = mid - 1;
       mid = ((left + right) / 2) | 0;
       midVal = array[mid];
     }
   }
-  console.log('value not found!');
+  // console.log('value not found!');
   return false;
 };
 
